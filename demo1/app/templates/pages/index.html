@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+  <div class="bg-light p-sm-0">
+      <div class="hero-section d-flex justify-content-end px-5 py-4  px-sm-3 py-sm-5">
+                <div class="w-50 w-sm-95 " >
+                    <h4 class="slider__item-subtitle  text-white "data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000" data-aos-delay="1200">
+                        <span class="fs-35 fs-sm-24  text-center text-sm-none d-block">Guangzhou Medical of China </span> <br>
+                        <span class="fs-20 fs-sm-19 ">это сеть китайских медицинских центров, объединяющая современные методы лечения и традиционные китайские подходы.</span>
+                    </h4>
+                    <form action="{% url 'feedback' %}" method="POST" >
+                      {% csrf_token %}
+                      <div class="grid-2 gap-2 mt-2 py-sm-2 sm-gap-1">
+                            <div class="input-field">
+                                <label  class="label  text-white fs-20">Имя</label>
+                                <input name="name" placeholder="Имя"   type="text" class=" bg-light input">
+                            </div>
+                            <div class="input-field  text-white fs-20">
+                                <label  class="label">Фамилия</label>
+                                <input name="username" placeholder="Фамилия" type="text" class="input">
+                            </div>
+                      </div>
+                      <div class="input-field py-sm-2  text-white fs-20 my-3 my-sm-1">
+                        <label  class="label">Телефонный номер</label>
+                        <input name="number" placeholder="Телефонный номер" type="text" class="input">
+                      </div>
+                      <div class="input-field mb-2 text-white  my-sm-1">
+                        <label  class="label">Отправить вопросы</label> 
+                        <textarea name="message" placeholder="Отправить вопросы" class="w-100 fs-20 border-none rounded-2 p-2 min-vh-20 sm-vh-40" rows="5"></textarea>   
+                      </div>
+                     <button class="btn btn-night ml-auto p-3 rounded-2">Отправить </button>
+                    </form>
+                </div>
+      </div>
+      <div>
+        <h2 class="fs-30 text-ocean p-3 text-center">Какие услуги мы предоставляем?</h2>
+        <div class="hr-dark-ocean  w-40 mx-auto b-2 ">  </div>
+      </div>
+      <section class="cart grid-4 gap-2 p-5 p-sm-3 d-flex flex-wrap-lg">   
+        <div class=" shadow-2 p-3 bg-white rounded-2">
+            <div class="services__item-icon">
+                <img src="../../static/images/yurak.png" class="w-40 mr-6 mr-sm-6 vh-40" alt="">
+            </div>
+            <h4 class="fs-24 mt-4 text-dark-ocean text-center">
+                Дыхательная система
+            </h4>
+   
+        </div>
+        <div class=" shadow-2 rounded-2 bg-white p-3">
+          <div class="services__item-icon">
+              <img src="http://guangzhou.uz/storage/images/wBu1ETOu8h4yuAAlToA9gtQPRCf4kERdGKi9qAuN.png" class="w-40 mr-6 mr-sm-6 mr-lg-6 mr-lgg-6 vh-40" alt="">
+          </div>
+          <h4 class="fs-24 mt-4 text-dark-ocean text-center">
+            Гастроэнтерология
+          </h4>
+        </div>
+        <div class=" shadow-2 rounded-2 bg-white p-3">
+        <div class="services__item-icon">
+            <img src="http://guangzhou.uz/storage/images/wBu1ETOu8h4yuAAlToA9gtQPRCf4kERdGKi9qAuN.png" class="w-40 mr-6 mr-sm-6 mr-lg-6 mr-lgg-6 vh-40" alt="">
+        </div>
+        <h4 class="fs-24 mt-4 text-dark-ocean text-center">
+          Реабилитация после        инсульта
+        </h4>
+        </div>
+        <div class=" shadow-2 rounded-2 bg-white p-3">
+        <div class="services__item-icon">
+            <img src="http://guangzhou.uz/storage/images/m6nreHI9OvSMwdNYXxM3fTCZiEW8xK2LsWu6h60y.png" class="w-45 mr-6 mr-sm-6 mr-lg-6 mr-lgg-6 vh-40" alt="">
+        </div>
+        <h4 class="fs-24 mt-4 text-dark-ocean text-center">
+            Урология
+        </h4>
+        </div>
+        <div class=" shadow-2 rounded-2 bg-white p-3">
+          <div class="services__item-icon">
+              <img src="http://guangzhou.uz/storage/images/WPgZotzCeFCOlHGkUL7zYIjuGuitCkHyqnSBzvgS.png" class="w-40 mr-6 mr-sm-6 mr-lg-6 mr-lgg-6 vh-40" alt="">
+          </div>
+          <h4 class="fs-24 mt-4 text-dark-ocean text-center">
+            Гинекология
+          </h4>
+ 
+        </div>
+        <div class=" shadow-2 rounded-2 bg-white p-3">
+          <div class="services__item-icon">
+              <img src="http://guangzhou.uz/storage/images/MTOsQ1CLPdOlZMDcr1Bzo20UcJk0wzrAhRmVxvEj.png" class="w-40 mr-6 mr-sm-6 mr-lg-6 mr-lgg-6 vh-40" alt="">
+          </div>
+          <h4 class="fs-24 mt-4 text-dark-ocean text-center">
+            Лечение паралича
+          </h4>
+        </div>
+        <div class=" shadow-2 rounded-2 bg-white p-3">
+        <div class="services__item-icon">
+            <img src="http://guangzhou.uz/storage/images/uY0oSwDQyq4MuexjbFAYJ40cNRAyh113I17sqres.png" class="w-40 mr-6 mr-sm-6 mr-lg-6 mr-lgg-6 vh-40" alt="">
+        </div>
+        <h4 class="fs-24 mt-4 text-dark-ocean text-center">
+            Дыхательная система
+        </h4>
+        </div>
+        <div class=" shadow-2 rounded-2 bg-white p-3">
+        <div class="services__item-icon">
+            <img src="../../static/images/yurak.png" class="w-45 mr-6 mr-sm-6 mr-lg-6 mr-lgg-6 vh-40" alt="">
+        </div>
+        <h4 class="fs-24 mt-4 text-dark-ocean text-center">
+            Дыхательная система
+        </h4>
+        </div>
+      </section>
+      <section class="method grid-2  px-5 p-sm-3 gap-2 ">
+          <div class="left  bg-white gap-2 rounded-2 p-3 ">
+            <div class="grid-2  gap-2">
+              <img src="../../static/images/6Rq7pgrQIbiT8DWquzK3FhMUCCtDKH8PsPx8EFOQ.png" class="w-100 img-left rounded-2" alt="">
+              <img src="../../static/images/XqiAyDJpS9Rmc85gA8Du5Fw9WwdjJpdtEalOEtYs.png" class="w-100 img-left rounded-2" alt="">
+            </div>
+            <img src="../../static/images/tbOzpNNokVWkf0bnm9sylTwcP1g2vvdIcyJdfUxI.png" class="w-100 mt-4 rounded-2 img-method" alt="">
+          </div>
+          <div class="right bg-white rounded-2 px-5 py-3">
+            <h2 class="fs-30 text-ocean  text-center">Методы лечения</h2>
+            <div class="hr-dark-purple b-2 ">  </div>
+            <p class="fs-20">
+              В китайской медицине существуют 4 основных способа диагностики. <br><br>
+              Опрос. Врач опрашивает пациента о беспокойствах, выделениях, что свидетельствует о качестве энергии и функционировании внутренних органов. <br><br>
+              Осмотр. Важным источником информации является осмотр языка. Цвет, запах, влажность, налёт - всё это говорит врачу о состоянии здоровья пациента. <br><br>
+              Прослушивание и обоняние. Метод состоит из прослушивания звучания голоса, речи, дыхания и исследования на запах. <br><br>
+              Пальпация. Китайская медицина насчитывает 28 видов пульса. Разная сила нажатия на запястье позволяет узнать о состоянии органов и систем, зарождении или наличии хронических болезней и особенностей психического состояния.
+            </p>
+          </div>
+      </section>
+      <section class="py-0 sm-vh-50 my-0">
+        <div class="tab " tab-id="9">
+          <div class="map px-5 pt-5" >
+            <iframe src="https://maps.google.com/maps?=es;z=14&amp;output=embed"
+                    width="100%" height="580"
+                    frameborder="1" ></iframe>
+          </div>
+        </div> 
+      </section>
+    <footer class="footer-distributed ">
+      <div class="footer-left">
+      <h3>WebDev<span>Trick</span></h3>
+      <p class="footer-links">
+      <a href="#">Home</a>
+      ·
+      <a href="#">Blog</a>
+      ·
+      <a href="#">Pricing</a>
+      ·
+      <a href="#">About</a>
+      ·
+      <a href="#">Faq</a>
+      ·
+      <a href="#">Contact</a>
+      </p>
+      <p class="footer-company-name">webdeveloper &copy; 2022</p>
+      </div>
+      <div class="footer-center">
+      <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>21 Revolution Street</span> Uzbekistan, Buxara</p>
+      </div>
+      <div>
+      <i class="fa fa-phone"></i>
+      <p>+998(93)967-31-01</p>
+      </div>
+      <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="#">contact@webdevtrick.com</a></p>
+      </div>
+      
+      </div>
+      
+      <div class="footer-right"> 
+      <p class="footer-company-about">
+      <span>About the company</span>
+      Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+      </p>
+      <div class="footer-icons fs-30 text-white">
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-twitter' ></i>
+        <i class='bx bxl-linkedin'></i>
+        <i class='bx bxl-github' ></i>  
+      </div>
+      </div>
+    </footer>
+    </div>
+
+{% endblock %}
